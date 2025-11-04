@@ -57,7 +57,13 @@
                         </div>
                         <div class="col-sm-6">
                             <h5><i class="fas fa-tag"></i> Catégorie</h5>
-                            <span class="badge bg-secondary">{{ $livre['categorie'] }}</span>
+                            <span class="badge bg-secondary">
+                                @if(is_array($livre['categorie']) || is_object($livre['categorie']))
+                                    {{ $livre['categorie']['nom'] ?? $livre['categorie']->nom ?? 'N/A' }}
+                                @else
+                                    {{ $livre['categorie'] }}
+                                @endif
+                            </span>
                         </div>
                     </div>
 

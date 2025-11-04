@@ -102,6 +102,9 @@
                             <i class="fas fa-info-circle"></i> À propos
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('supports.index') }}">Supports</a>
+                    </li>
                 </ul>
                 
                 {{-- Barre de recherche --}}

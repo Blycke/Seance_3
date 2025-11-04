@@ -15,8 +15,8 @@ use App\Http\Controllers\LivreController;
 | - Contrôleurs
 */
 
-Route::get('/test-debug', function () { 
-    return 'Laravel fonctionne !'; 
+Route::get('/test-debug', function () {
+    return 'Laravel fonctionne !';
 });
 
 // 1. Accueil - Route simple
@@ -45,3 +45,7 @@ Route::get('/demo/hello/{nom?}', function ($nom = 'Étudiant') {
 Route::get('/test', function () {
     return '<h1>Test Laravel fonctionne !</h1><p>Si vous voyez ce message, Laravel fonctionne.</p>';
 })->name('test');
+
+use App\Http\Controllers\SupportController;
+
+Route::resource('supports', SupportController::class);
